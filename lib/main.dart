@@ -6,15 +6,10 @@ import 'screens/home_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
-  runApp(const SmartCartApp());
-_initServices();
-}
-
-Future<void> _initServices() async {
   await initializeDateFormatting('es', null);
   await HiveService.init();
   await NotificationService.init();
+  runApp(const SmartCartApp());
 }
 
 class SmartCartApp extends StatelessWidget {
@@ -22,7 +17,7 @@ class SmartCartApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Compralo',
+      title: 'SmartCart',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorSchemeSeed: const Color(0xFF667eea),

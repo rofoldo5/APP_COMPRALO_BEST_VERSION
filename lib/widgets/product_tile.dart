@@ -23,8 +23,8 @@ class ProductTile extends StatelessWidget {
       case 'Granos': return const Color(0xFFffa000);
       case 'Frutas': return const Color(0xFF43e97b);
       case 'Aseo': return const Color(0xFF38f9d7);
-      case 'Lactes': return const Color.fromARGB(255, 86, 4, 97);
-      default: return const Color(0xFF764ba2);
+      case 'Personal': return const Color.fromARGB(0, 1, 1, 244);
+    default: return const Color(0xFF764ba2);
 
     }
   }
