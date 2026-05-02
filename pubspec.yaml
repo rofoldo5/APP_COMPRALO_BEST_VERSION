@@ -1,42 +1,44 @@
-name: Compralo
-description: App de lista inteligente
+name: smartcart
+description: App de lista de mercado inteligente con IA, notificaciones y persistencia local.
 publish_to: 'none'
 version: 1.0.0+1
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
-  
 
 dependencies:
   flutter:
     sdk: flutter
+
+  # ─── Base de datos local ───
   hive: ^2.2.3
   hive_flutter: ^1.1.0
-  flutter_local_notifications: ^17.0.0
-  timezone: ^0.9.2
+
+  # ─── Notificaciones con sonido, vibración y alarmas exactas ───
+  flutter_local_notifications: ^17.2.0
+  timezone: ^0.9.4
+
+  # ─── HTTP para la IA (Claude API) ───
   http: ^1.2.0
+
+  # ─── Formato de fechas en español ───
   intl: ^0.19.0
-  animated_text_kit: ^4.2.2
+
+  # ─── Animaciones ───
   flutter_animate: ^4.5.0
+
+  # ─── Íconos Material ───
   cupertino_icons: ^1.0.6
-  analyzer: ^6.4.1
-  google_generative_ai: ^0.4.2
- 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+  # ─── Generador de adaptadores Hive ───
   hive_generator: ^2.0.1
   build_runner: ^2.4.8
+
   flutter_lints: ^3.0.0
-  flutter_launcher_icons: ^0.14.4
 
 flutter:
   uses-material-design: true
-
-flutter_launcher_icons:
-  android: "launcher_icon"
-  ios: true
-  image_path: "assets/icon/iconcompralo.png" 
-
-  adaptive_icon_foreground: "assets/icon/iconcompralo.png" # Para Android 8.0+
